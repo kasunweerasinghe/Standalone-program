@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="543.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeAddCustomerFormController">
+   <children>
+      <JFXTextField fx:id="txtCId" labelFloat="true" layoutX="56.0" layoutY="94.0" onKeyReleased="#textFields_key_Released" promptText="Customer ID ">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="56.0" layoutY="159.0" onKeyReleased="#textFields_key_Released" promptText="Name">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="56.0" layoutY="229.0" onKeyReleased="#textFields_key_Released" promptText="Address">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="56.0" layoutY="308.0" onKeyReleased="#textFields_key_Released" promptText="Contact">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNic" labelFloat="true" layoutX="56.0" layoutY="381.0" onKeyReleased="#textFields_key_Released" promptText="Nic">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Pane layoutY="-1.0" prefHeight="55.0" prefWidth="335.0" style="-fx-background-color: #6200EE;">
+         <children>
+            <Text fill="WHITE" layoutX="81.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Customer.">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <JFXButton fx:id="btnSaveCustomer" buttonType="RAISED" focusTraversable="false" layoutX="86.0" layoutY="457.0" onAction="#btnSaveOnAction" prefHeight="37.0" prefWidth="127.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="EmployeeSearchPetProductFormContext" prefHeight="562.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeSearchPetProductFormController">
+   <children>
+      <TableView fx:id="tblPetProduct" layoutX="5.0" layoutY="135.0" prefHeight="457.0" prefWidth="831.0">
+         <columns>
+            <TableColumn fx:id="colPPId" prefWidth="126.0" text="Product ID" />
+            <TableColumn fx:id="colName" prefWidth="284.0" text="Name" />
+            <TableColumn fx:id="colType" prefWidth="182.0" text="Type" />
+            <TableColumn fx:id="colPrice" prefWidth="107.0" text="Price" />
+            <TableColumn fx:id="colQtyOnHand" minWidth="0.0" prefWidth="136.0" text="QTY on hand" />
+         </columns>
+      </TableView>
+      <Pane prefHeight="56.0" prefWidth="843.0" style="-fx-background-color: #6200EE;">
+         <children>
+            <Text fill="WHITE" layoutX="12.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Happy Paws Shop!">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="476.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblDate" layoutX="521.0" layoutY="19.0" text="2022/03/14" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="623.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblTime" layoutX="671.0" layoutY="19.0" text="08:34:50" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="759.0" layoutY="14.0" onAction="#goBackOnAction" ripplerFill="#dd000b" style="-fx-background-color: #27ae60; -fx-background-radius: 5; -fx-border-color: #FFFFFF; -fx-border-radius: 5;" text="Back">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TextField fx:id="txtSearch" focusTraversable="false" layoutX="548.0" layoutY="79.0" prefHeight="35.0" prefWidth="273.0" promptText="SEARCH" style="-fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+   </children>
+</AnchorPane>

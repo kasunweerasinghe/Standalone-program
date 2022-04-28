@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PlaceOrderFormContext" prefHeight="781.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeePlaceOrderFormController">
+   <children>
+      <Pane prefHeight="56.0" prefWidth="855.0" style="-fx-background-color: #6200EE;">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Happy Paws Shop!">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="478.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblDate" layoutX="523.0" layoutY="18.0" text="2022/03/14" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="625.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblTime" layoutX="673.0" layoutY="18.0" text="08:34:50" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="792.0" layoutY="73.0" onAction="#openNewCustomerOnAction" ripplerFill="#dd000b" style="-fx-background-color: #27ae60; -fx-background-radius: 5; -fx-border-color: #FFFFFF; -fx-border-radius: 5;" text="+">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutY="112.0" prefHeight="3.0" prefWidth="855.0" />
+      <Separator layoutY="173.0" prefHeight="3.0" prefWidth="855.0" />
+      <Separator layoutY="236.0" prefHeight="3.0" prefWidth="855.0" />
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="612.0" layoutY="250.0" onAction="#removeItemOnAction" prefHeight="37.0" prefWidth="109.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Remove Item" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="731.0" layoutY="250.0" onAction="#btnAddToCartOnAction" prefHeight="37.0" prefWidth="109.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Add to Cart" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="732.0" layoutY="730.0" onAction="#btnPlaceOrderOnAction" prefHeight="37.0" prefWidth="109.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="15.0" layoutY="747.0" text="Total:">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalCost" layoutX="73.0" layoutY="747.0" text="0" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" editable="false" layoutX="162.0" layoutY="71.0" prefHeight="33.0" prefWidth="149.0" promptText="Customer name">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtAddress" editable="false" layoutX="342.0" layoutY="71.0" prefHeight="33.0" prefWidth="188.0" promptText="Customer Address">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtContact" editable="false" layoutX="558.0" layoutY="71.0" prefHeight="32.0" prefWidth="172.0" promptText="Contact Number">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPetType" editable="false" layoutX="162.0" layoutY="132.0" prefHeight="33.0" prefWidth="149.0" promptText="Pet Type">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPetBreeds" editable="false" layoutX="335.0" layoutY="132.0" prefHeight="33.0" prefWidth="137.0" promptText="Pet Breeds">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPetQTYOnHand" editable="false" layoutX="500.0" layoutY="132.0" prefHeight="33.0" prefWidth="137.0" promptText="QTY On Hand">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPetPrice" editable="false" layoutX="658.0" layoutY="132.0" prefHeight="33.0" prefWidth="109.0" promptText="Price">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPetQTY" layoutX="779.0" layoutY="132.0" onKeyReleased="#textFields_key_Released" prefHeight="33.0" prefWidth="58.0" promptText="QTY">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtProductType" editable="false" layoutX="413.0" layoutY="193.0" prefHeight="33.0" prefWidth="98.0" promptText="Type">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtProductName" editable="false" layoutX="162.0" layoutY="193.0" prefHeight="33.0" prefWidth="240.0" promptText="Product Name">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtProductQTYOnHand" editable="false" layoutX="523.0" layoutY="193.0" prefHeight="33.0" prefWidth="129.0" promptText="QTY On Hand">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtProductPrice" editable="false" layoutX="670.0" layoutY="193.0" prefHeight="33.0" prefWidth="98.0" promptText="Price">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtProductQTY" layoutX="779.0" layoutY="193.0" onKeyReleased="#textFields_key_Released" prefHeight="33.0" prefWidth="58.0" promptText="QTY">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+      <TableView fx:id="tblPetCart" layoutY="295.0" prefHeight="205.0" prefWidth="855.0">
+        <columns>
+          <TableColumn fx:id="colPetCId" prefWidth="124.0" text="Customer ID" />
+          <TableColumn fx:id="colPetId" prefWidth="97.0" text="Pet ID" />
+            <TableColumn fx:id="colPetUnitPrice" prefWidth="122.0" text="Unit Price" />
+            <TableColumn fx:id="colPetQty" prefWidth="105.0" text="Qty" />
+            <TableColumn fx:id="colPetTotalCost" prefWidth="134.0" text="Total Cost" />
+            <TableColumn fx:id="colPetDId" prefWidth="156.0" text="Driver ID" />
+            <TableColumn fx:id="colPetButton" prefWidth="116.0" text="----" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblProductCart" layoutY="512.0" prefHeight="205.0" prefWidth="855.0">
+         <columns>
+            <TableColumn fx:id="colProductCId" prefWidth="124.0" text="Customer ID" />
+            <TableColumn fx:id="colProductId" prefWidth="97.0" text="Product ID" />
+            <TableColumn fx:id="colProductUnitPrice" prefWidth="122.0" text="Unit Price" />
+            <TableColumn fx:id="colProductQty" prefWidth="105.0" text="Qty" />
+            <TableColumn fx:id="colProductTotalCost" prefWidth="134.0" text="Total Cost" />
+            <TableColumn fx:id="ProductProductDId" prefWidth="156.0" text="Driver ID" />
+            <TableColumn fx:id="colProductButton" prefWidth="116.0" text="----" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbCustomerId" layoutX="15.0" layoutY="74.0" prefHeight="27.0" prefWidth="129.0" promptText="Customer ID" unFocusColor="#509e03">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXComboBox fx:id="cmbPetId" layoutX="15.0" layoutY="135.0" prefHeight="27.0" prefWidth="129.0" promptText="Pet ID" unFocusColor="#509e03">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXComboBox fx:id="cmbProductId" layoutX="16.0" layoutY="196.0" prefHeight="27.0" prefWidth="129.0" promptText="Product ID" unFocusColor="#509e03">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <JFXComboBox fx:id="cmbDriverId" layoutX="16.0" layoutY="250.0" prefHeight="27.0" prefWidth="129.0" promptText="Driver ID" unFocusColor="#509e03">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXComboBox>
+      <TextField fx:id="txtDriverName" editable="false" layoutX="162.0" layoutY="247.0" prefHeight="33.0" prefWidth="137.0" promptText="Driver Name">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

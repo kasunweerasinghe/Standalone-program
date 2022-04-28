@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AdminAddProductFormContext" prefHeight="562.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminManagePetProductFormController">
+   <children>
+      <TextField fx:id="txtSearch" focusTraversable="false" layoutX="570.0" layoutY="86.0" prefHeight="27.0" prefWidth="242.0" promptText="SEARCH" style="-fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TableView fx:id="tblPetProduct" layoutY="146.0" prefHeight="436.0" prefWidth="837.0">
+         <columns>
+            <TableColumn fx:id="colPPId" prefWidth="126.0" text="Product ID" />
+            <TableColumn fx:id="colName" prefWidth="289.0" text="Name" />
+            <TableColumn fx:id="colType" prefWidth="177.0" text="Type" />
+            <TableColumn fx:id="colPrice" prefWidth="107.0" text="Price" />
+            <TableColumn fx:id="colQtyOnHand" minWidth="0.0" prefWidth="136.0" text="QTY on hand" />
+         </columns>
+      </TableView>
+      <Pane layoutY="-4.0" prefHeight="59.0" prefWidth="837.0" style="-fx-background-color: #6200EE;">
+         <children>
+            <Text fill="WHITE" layoutX="24.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Happy Paws Shop!">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="758.0" layoutY="16.0" onAction="#goBackOnAction" ripplerFill="#dd000b" style="-fx-background-color: #27ae60; -fx-background-radius: 5; -fx-border-color: #FFFFFF; -fx-border-radius: 5;" text="Back">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text fill="WHITE" layoutX="475.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblDate" layoutX="520.0" layoutY="20.0" text="2022/03/14" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="622.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblTime" layoutX="670.0" layoutY="20.0" text="08:34:50" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="25.0" layoutY="85.0" onAction="#addProductOnAction" prefHeight="37.0" prefWidth="127.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Add Product" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="178.0" layoutY="85.0" onAction="#deleteProductOnAction" prefHeight="37.0" prefWidth="143.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Delete Product" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="356.0" layoutY="85.0" onAction="#updateProductOnAction" prefHeight="37.0" prefWidth="143.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Update Product" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

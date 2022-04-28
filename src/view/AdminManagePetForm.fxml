@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="AdminManagePetFormContext" prefHeight="562.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminManagePetFormController">
+   <children>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="27.0" layoutY="92.0" onAction="#addPetOnAction" prefHeight="37.0" prefWidth="127.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Add Pet" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="186.0" layoutY="91.0" onAction="#deletePetOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Delete Pet" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="350.0" layoutY="91.0" onAction="#updatePetOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Update Pet" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtSearch" focusTraversable="false" layoutX="539.0" layoutY="92.0" prefHeight="27.0" prefWidth="262.0" promptText="SEARCH" style="-fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TableView fx:id="tblPet" layoutY="152.0" prefHeight="420.0" prefWidth="827.0">
+         <columns>
+            <TableColumn fx:id="colPId" prefWidth="101.0" text="Pet ID" />
+            <TableColumn fx:id="coltype" prefWidth="126.0" text="Type" />
+            <TableColumn fx:id="colBreeds" prefWidth="164.0" text="Breeds" />
+            <TableColumn fx:id="colPrice" prefWidth="133.0" text="Price" />
+            <TableColumn fx:id="colGender" prefWidth="117.0" text="Gender" />
+            <TableColumn fx:id="colAge" minWidth="0.0" prefWidth="77.0" text="Age" />
+            <TableColumn fx:id="colQtyOnHand" minWidth="0.0" prefWidth="108.0" text="QTY on hand" />
+         </columns>
+      </TableView>
+      <Pane layoutX="-1.0" prefHeight="59.0" prefWidth="829.0" style="-fx-background-color: #6200EE;">
+         <children>
+            <Text fill="WHITE" layoutX="22.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Happy Paws Shop!">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="751.0" layoutY="14.0" onAction="#goBackOnAction" ripplerFill="#dd000b" style="-fx-background-color: #27ae60; -fx-background-radius: 5; -fx-border-color: #FFFFFF; -fx-border-radius: 5;" text="Back">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Text fill="WHITE" layoutX="455.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblDate" layoutX="500.0" layoutY="17.0" text="2022/03/14" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="602.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblTime" layoutX="650.0" layoutY="17.0" text="08:34:50" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="EmployeeManageCustomerContext" prefHeight="564.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeManageCustomerFormController">
+   <children>
+      <AnchorPane layoutY="51.0" prefHeight="513.0" prefWidth="218.0" style="-fx-background-color: #C4C4C4;">
+         <children>
+            <Separator layoutY="395.0" prefHeight="3.0" prefWidth="218.0" />
+            <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="10.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/outline_person_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="10.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/outline_pets_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="10.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/outline_category_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="11.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/outline_logout_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="43.0" layoutX="10.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assests/outline_list_alt_black_24dp.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="57.0" layoutY="33.0" prefHeight="46.0" prefWidth="151.0" ripplerFill="#f80606" style="-fx-background-color: #4A6572; -fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;" text="Customer" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="57.0" layoutY="119.0" onAction="#btnGoPetFormOnAction" prefHeight="46.0" prefWidth="151.0" ripplerFill="#f80606" style="-fx-background-color: #4A6572; -fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;" text="Pet" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="57.0" layoutY="201.0" onAction="#btnGoPetProductOnAction" prefHeight="46.0" prefWidth="151.0" ripplerFill="#f80606" style="-fx-background-color: #4A6572; -fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;" text="Pet Product" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="57.0" layoutY="301.0" onAction="#btnPlaceOrderOnAction" prefHeight="46.0" prefWidth="151.0" ripplerFill="#f80606" style="-fx-background-color: #4A6572; -fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;" text="Place Order" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="58.0" layoutY="428.0" onAction="#btnSignOutOnAction" prefHeight="46.0" prefWidth="151.0" ripplerFill="#0d057c" style="-fx-background-color: #4A6572; -fx-background-radius: 15;" text="Sign Out" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblCustomer" layoutX="219.0" layoutY="137.0" prefHeight="427.0" prefWidth="636.0">
+        <columns>
+          <TableColumn fx:id="colCId" prefWidth="107.0" text="Customer ID" />
+          <TableColumn fx:id="colName" prefWidth="127.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="189.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="101.0" text="Contact" />
+            <TableColumn fx:id="colNIc" prefWidth="111.0" text="NIC" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="51.0" prefWidth="856.0" style="-fx-background-color: #6200EE;">
+         <children>
+            <Text fill="WHITE" layoutX="5.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Happy Paws Shop!">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="548.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblDate" layoutX="593.0" layoutY="15.0" text="2022/03/14" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" layoutX="695.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time:">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblTime" layoutX="743.0" layoutY="15.0" text="08:34:50" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="231.0" layoutY="71.0" onAction="#btnAddCustomer" prefHeight="37.0" prefWidth="135.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Add Customers" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="386.0" layoutY="71.0" onAction="#btnDeleteCustomer" prefHeight="37.0" prefWidth="151.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Delete Customer" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="557.0" layoutY="71.0" onAction="#btnUpdateCustomer" prefHeight="37.0" prefWidth="151.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Update Customer" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtSearch" layoutX="720.0" layoutY="72.0" prefHeight="35.0" prefWidth="122.0" promptText="SEARCH" style="-fx-background-radius: 15; -fx-border-color: #000000; -fx-border-radius: 15;">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
+   </children>
+</AnchorPane>

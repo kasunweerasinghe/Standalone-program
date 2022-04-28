@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="584.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminAddEmployeeFormController">
+   <children>
+      <Separator layoutY="55.0" prefHeight="3.0" prefWidth="318.0" />
+      <JFXTextField fx:id="txtEId" labelFloat="true" layoutX="46.0" layoutY="96.0" onKeyReleased="#textFields_key_Released" promptText="Employee ID">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="46.0" layoutY="171.0" onKeyReleased="#textFields_key_Released" promptText="Name">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="46.0" layoutY="240.0" onKeyReleased="#textFields_key_Released" promptText="Address">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="46.0" layoutY="313.0" onKeyReleased="#textFields_key_Released" promptText="Contact">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="46.0" layoutY="379.0" onKeyReleased="#textFields_key_Released" promptText="User Name">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="pwdPassword" labelFloat="true" layoutX="46.0" layoutY="454.0" onKeyReleased="#textFields_key_Released" promptText="Password">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSaveEmployee" buttonType="RAISED" focusTraversable="false" layoutX="85.0" layoutY="528.0" onAction="#btnSaveOnAction" prefHeight="37.0" prefWidth="127.0" ripplerFill="RED" style="-fx-background-color: #232F34; -fx-background-radius: 10;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Pane layoutY="-1.0" prefHeight="56.0" prefWidth="318.0" style="-fx-background-color: #6200EE;">
+         <children>
+            <Text fill="WHITE" layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Employee.">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
