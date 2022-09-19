@@ -10,6 +10,7 @@ Dashboard
 
 <img width="968" alt="Screenshot 2022-09-19 at 5 33 36 PM" src="https://user-images.githubusercontent.com/84431272/191017260-e6aa69ee-07f0-49ab-9ed2-b147150ba236.png">
 
+--------------
 
 EMPLOYEE
 Dashboard
